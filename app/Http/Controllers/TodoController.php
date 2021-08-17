@@ -31,11 +31,18 @@ class TodoController extends Controller
 
     public function store(TodoRequest $request)
     {
+        // dd($request);
         $inputs = $request->all();
+        // dd($this->todo); 
         $this->todo->fill($inputs);
+        // dd($this->todo);
         $this->todo->save();
         return redirect()->route('todo.index');
     }
+
+    // $content = $request->input('content');// 焼肉
+    // $this->todo->content = $content;
+    // $this->todo->save();
 
     public function index()
     {

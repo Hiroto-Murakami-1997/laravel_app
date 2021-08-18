@@ -40,10 +40,6 @@ class TodoController extends Controller
         return redirect()->route('todo.index');
     }
 
-    // $content = $request->input('content');// 焼肉
-    // $this->todo->content = $content;
-    // $this->todo->save();
-
     public function index()
     {
         $todos = $this->todo->all();
